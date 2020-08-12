@@ -19,7 +19,6 @@ if __name__ == '__main__':
 	# nltk.download('gutenberg')
 	# Fetch corpus from nltk
 	my_words = nltk.corpus.gutenberg.words("austen-emma.txt")
-	print(len(set(my_words)))
 	
 	# Remove punctuation	
 	my_words = [w.translate(str.maketrans('', '', string.punctuation)) for w in my_words]
@@ -39,11 +38,22 @@ if __name__ == '__main__':
 	# Convert text to list of word ids
 	token_ids = [word_to_id[token] for token in my_words]
 
+	# NEED TO FETCH SENTENCES INSTEAD OF WORDS
+	# Training word pairs
+	window_size = 2
+	data = []
+	for i, w in enumerate(my_words[2:5]):
+		for j in range(-window_size,window_size+1):
+			if j != 0:
+				data.append([w, my_words[i + 2 + j]])
+
+	print(data[:20])
+	print(my_words[:20])
+
+	data = [[w_centre, w_context] for w_centre in w]
+
+	pdb.set_trace()
+
 	# One hot encodings
 	vec = OneHotEncoder()
 	X = vec.fit_transform(token_ids)
-
-	print(type(X))
-	print(X.shape)
-
-
