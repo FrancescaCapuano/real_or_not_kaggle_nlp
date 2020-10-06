@@ -11,6 +11,7 @@ from nltk.corpus import stopwords
 from sklearn.preprocessing import OneHotEncoder
 import numpy as np
 import tensorflow as tf
+from tensorflow import keras
 
 def word2vec():
 	pass
@@ -61,8 +62,8 @@ if __name__ == '__main__':
 	# model creation
 	model = keras.Sequential()
 	model.add(keras.Input(shape=(n_tokens,)))
-	model.add(layers.Dense(300, activation="relu"))
-	model.add(layers.Dense(n_tokens))
+	model.add(keras.layers.Dense(300, activation="relu"))
+	model.add(keras.layers.Dense(n_tokens))
 	
 	model.compile(optimizer='adam',
               loss=tf.keras.losses.categorical_crossentropy(),
