@@ -59,6 +59,10 @@ if __name__ == '__main__':
 	n_tokens = len(word_to_id.keys())
 	one_hot_encodings = [np.eye(n_tokens)[pair] for pair in data]
 
+	train = np.array(one_hot_encodings)[:, 0, :]
+	label = np.array(one_hot_encodings)[:, 1, :]
+
+
 	# model creation
 	model = keras.Sequential()
 	model.add(keras.Input(shape=(n_tokens,)))
@@ -66,7 +70,7 @@ if __name__ == '__main__':
 	model.add(keras.layers.Dense(n_tokens))
 	
 	model.compile(optimizer='adam',
-              loss=tf.keras.losses.categorical_crossentropy(),
+              loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True),
               metrics=['accuracy'])
 
 	model.fit(train, label)
