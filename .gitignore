@@ -131,3 +131,5 @@ dmypy.json
 # my gitignore
 data/
 .idea
+
+saved_model/

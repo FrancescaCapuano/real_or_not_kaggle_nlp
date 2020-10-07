@@ -13,8 +13,10 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 
+
 def word2vec():
 	pass
+
 
 if __name__ == '__main__':
 
@@ -23,10 +25,11 @@ if __name__ == '__main__':
 	# Fetch corpus from nltk
 	my_sentences = nltk.corpus.gutenberg.sents("austen-emma.txt")
 
-	n_sentences = 5
+	# n_sentences = 50
 	
 	# Remove punctuation	
-	my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences[:n_sentences]]
+	# my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences[:n_sentences]]
+	my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences]
 	# remove empty strings
 	my_sentences = [[w for w in sent_words if w != ""] for sent_words in my_sentences]
 
@@ -80,3 +83,5 @@ if __name__ == '__main__':
               metrics=['accuracy'])
 
 	model.fit(train, label, epochs=100)
+
+	model.save('saved_model/my_model')
