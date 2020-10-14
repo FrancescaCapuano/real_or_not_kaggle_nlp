@@ -14,8 +14,10 @@ import tensorflow as tf
 from tensorflow import keras
 import pickle
 
+
 def word2vec():
 	pass
+
 
 if __name__ == '__main__':
 
@@ -27,7 +29,8 @@ if __name__ == '__main__':
 	n_sentences = 3000
 	
 	# Remove punctuation	
-	my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences[:n_sentences]]
+	# my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences[:n_sentences]]
+	my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences]
 	# remove empty strings
 	my_sentences = [[w for w in sent_words if w != ""] for sent_words in my_sentences]
 
@@ -90,3 +93,5 @@ if __name__ == '__main__':
               metrics=['accuracy'])
 
 	model.fit(train, label, epochs=100)
+
+	model.save('saved_model/my_model')
