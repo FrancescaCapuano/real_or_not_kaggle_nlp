@@ -24,12 +24,13 @@ if __name__ == '__main__':
 	# nltk.download('gutenberg')
 	# Fetch corpus from nltk
 	my_sentences = nltk.corpus.gutenberg.sents("austen-emma.txt")
+	print("num_sentences", len(my_sentences))
 
-	# n_sentences = 50
+	n_sentences = 50000
 	
 	# Remove punctuation	
-	# my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences[:n_sentences]]
-	my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences]
+	my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences[:n_sentences]]
+	# my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences]
 	# remove empty strings
 	my_sentences = [[w for w in sent_words if w != ""] for sent_words in my_sentences]
 
