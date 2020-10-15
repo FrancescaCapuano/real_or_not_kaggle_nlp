@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11ba36ad-7a30-4c4d-83da-e7a5aec93187" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/word2vec.py" beforeDir="false" afterPath="$PROJECT_DIR$/word2vec.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,8 @@
       <option name="presentableId" value="Default" />
       <updated>1597257599607</updated>
       <workItem from="1597257601819" duration="2537000" />
-      <workItem from="1602006881690" duration="3828000" />
+      <workItem from="1602006881690" duration="3947000" />
+      <workItem from="1602705396808" duration="556000" />
     </task>
     <servers />
   </component>
