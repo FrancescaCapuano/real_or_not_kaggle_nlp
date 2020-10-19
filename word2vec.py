@@ -49,17 +49,11 @@ if __name__ == '__main__':
 	# Create unique id for each token
 	word_to_id = {token: idx for idx, token in enumerate(set([w for sent in my_sentences for w in sent]))}
 
-<<<<<<< HEAD
-=======
 	# Save word to id dictionary
 	with open('word_to_id.pickle', 'wb') as handle:
 	    pickle.dump(word_to_id, handle, protocol=pickle.HIGHEST_PROTOCOL)
-
 	print(len(word_to_id.keys()))
-
 	print(word_to_id["Jane"])
-	pdb.set_trace()
->>>>>>> e9dc1658e89f3d000ba5c0581cbc2d9f14ff5ae1
 
 	# Convert text to list of word ids
 	sentences_ids = [[word_to_id[token] for token in sent] for sent in my_sentences]
@@ -89,18 +83,11 @@ if __name__ == '__main__':
 
 
 	# model creation
-<<<<<<< HEAD
 	print("[MODEL] Building model")
-	model = keras.Sequential()
-	model.add(keras.Input(shape=(n_tokens,)))
-	model.add(keras.layers.Dense(300, activation="relu"))
-	model.add(keras.layers.Dense(n_tokens))
-=======
 	inputs = keras.Input(shape=(n_tokens,))
 	x = keras.layers.Dense(300, activation="relu")(inputs)
 	outputs = keras.layers.Dense(n_tokens)(x)
 	model = keras.models.Model(inputs=inputs, outputs=outputs)
->>>>>>> e9dc1658e89f3d000ba5c0581cbc2d9f14ff5ae1
 	
 	model.compile(optimizer='adam',
               loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True),
