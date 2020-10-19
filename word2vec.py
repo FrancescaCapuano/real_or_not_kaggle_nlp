@@ -52,8 +52,9 @@ if __name__ == '__main__':
 	# Save word to id dictionary
 	with open('word_to_id.pickle', 'wb') as handle:
 	    pickle.dump(word_to_id, handle, protocol=pickle.HIGHEST_PROTOCOL)
-	print(len(word_to_id.keys()))
-	print(word_to_id["Jane"])
+
+	print("[DICT] num of id:", len(word_to_id.keys()))
+	print("[DICT] jane = {} idx".format(word_to_id["Jane"]))
 
 	# Convert text to list of word ids
 	sentences_ids = [[word_to_id[token] for token in sent] for sent in my_sentences]
