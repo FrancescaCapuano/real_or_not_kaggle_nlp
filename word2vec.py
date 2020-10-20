@@ -8,7 +8,6 @@ from nltk.stem import WordNetLemmatizer
 import string
 import pdb 
 from nltk.corpus import stopwords
-from sklearn.preprocessing import OneHotEncoder
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
