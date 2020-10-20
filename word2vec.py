@@ -27,11 +27,11 @@ if __name__ == '__main__':
 	my_sentences = nltk.corpus.gutenberg.sents("austen-emma.txt")
 	print("num_sentences", len(my_sentences))
 
-	n_sentences = 5
+	# n_sentences = 3000
 	
 	# Remove punctuation
-	my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences[:n_sentences]]
-	# my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences]
+	# my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences[:n_sentences]]
+	my_sentences = [[w.translate(str.maketrans('', '', string.punctuation)) for w in sent] for sent in my_sentences]
 	# remove empty strings
 	my_sentences = [[w for w in sent_words if w != ""] for sent_words in my_sentences]
 	print("[CORPUS] n_sentences: {}".format(len(my_sentences)))
@@ -73,7 +73,8 @@ if __name__ == '__main__':
 
 	# One hot encodings
 	n_tokens = len(word_to_id.keys())
-	one_hot_encodings = [np.eye(n_tokens)[pair] for pair in data]
+	eye_encode = np.eye(n_tokens)
+	one_hot_encodings = [eye_encode[pair] for pair in data]
 	print("[One HOT] finished encoding into one hot")
 
 	# separate words pairs into training and label
@@ -95,6 +96,6 @@ if __name__ == '__main__':
               metrics=['accuracy'])
 	print("[MODEL] Model compiled!")
 
-	model.fit(train, label, epochs=100)
+	model.fit(train, label, epochs=15)
 
 	model.save('saved_model/my_model')
