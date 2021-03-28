@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="11ba36ad-7a30-4c4d-83da-e7a5aec93187" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+=======
     <list default="true" id="11ba36ad-7a30-4c4d-83da-e7a5aec93187" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/test_ridgeClassifier.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -8,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/word2vec.py" beforeDir="false" afterPath="$PROJECT_DIR$/word2vec.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/word_to_id.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/word_to_id.pickle" afterDir="false" />
     </list>
+>>>>>>> 5da16576a097b6653ffa68a41c98d31acb8f6fc8
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,9 +67,17 @@
       <updated>1597257599607</updated>
       <workItem from="1597257601819" duration="2537000" />
       <workItem from="1602006881690" duration="3828000" />
+<<<<<<< HEAD
+      <workItem from="1602234640251" duration="3247000" />
+=======
       <workItem from="1602234640251" duration="2996000" />
+<<<<<<< HEAD
       <workItem from="1603210592235" duration="8869000" />
       <workItem from="1616944720558" duration="4351000" />
+=======
+      <workItem from="1603210592235" duration="5805000" />
+>>>>>>> 5da16576a097b6653ffa68a41c98d31acb8f6fc8
+>>>>>>> 8be9442cd7915f452939bf22d6086d4fbb1f1e94
     </task>
     <servers />
   </component>
