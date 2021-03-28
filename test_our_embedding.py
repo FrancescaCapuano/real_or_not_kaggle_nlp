@@ -49,6 +49,7 @@ most_common_words = word_counter.most_common(n_most_common)
 print("most common words:")
 print(most_common_words)
 
+# looking each (10-) most common word its similarity with all the others
 cos_similarity = np.zeros((n_most_common, n_words))
 for i in range(n_most_common):
     print("word1", most_common_words[i][0])
@@ -61,6 +62,7 @@ for i in range(n_most_common):
         word2_emb = embedding.predict(word2)
         cos_similarity[i, j] = sklearn.metrics.pairwise.cosine_similarity(word1_emb, word2_emb)
 
+#
 max_arg = np.argsort(cos_similarity, axis=1)[:, -5:]
 print("shape max_arg", np.shape(max_arg))
 

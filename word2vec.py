@@ -63,9 +63,9 @@ if __name__ == '__main__':
 	data = []
 	for sent in sentences_ids:
 		for i, w in enumerate(sent):
-			for j in range(-window_size,window_size+1):
+			for j in range(-window_size, window_size+1):
 				if j != 0:
-					if 0 <=  i+ j < len(sent):
+					if 0 <= i+ j < len(sent):
 						data.append([w, sent[i + j]])
 	print("[WORD PAIRS] finished building words pairs")
 
@@ -95,6 +95,6 @@ if __name__ == '__main__':
               metrics=['accuracy'])
 	print("[MODEL] Model compiled!")
 
-	model.fit(train, label, epochs=15)
+	model.fit(train, label, epochs=50)
 
 	model.save('saved_model/my_model')

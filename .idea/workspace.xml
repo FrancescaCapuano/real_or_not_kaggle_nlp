@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11ba36ad-7a30-4c4d-83da-e7a5aec93187" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_embedding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_ridgeClassifier.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/load_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_model/my_model/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/saved_model/my_model/saved_model.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_model/my_model/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/saved_model/my_model/variables/variables.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_model/my_model/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/saved_model/my_model/variables/variables.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_our_embedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_our_embedding.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/word2vec.py" beforeDir="false" afterPath="$PROJECT_DIR$/word2vec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/word_to_id.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/word_to_id.pickle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="SshConsoleOptionsProvider">
     <option name="myEncoding" value="UTF-8" />
@@ -54,7 +63,8 @@
       <workItem from="1597257601819" duration="2537000" />
       <workItem from="1602006881690" duration="3828000" />
       <workItem from="1602234640251" duration="2996000" />
-      <workItem from="1603210592235" duration="5805000" />
+      <workItem from="1603210592235" duration="8869000" />
+      <workItem from="1616944720558" duration="4351000" />
     </task>
     <servers />
   </component>
